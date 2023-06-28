@@ -7,7 +7,7 @@ interface Post {
     body: string;
     userId: number;
   }
- const usePost = () =>{
+ const usePost = (userId: number | undefined) =>{
     const fetchPost = ()=>
    axios
       .get('https://jsonplaceholder.typicode.com/posts')
@@ -15,7 +15,7 @@ interface Post {
       
    
    return useQuery<Post[], Error>({
-    queryKey: ['post'],
+    queryKey:userId ? ['users', userId , 'posts']: ['posts'],
     queryFn: fetchPost,
     staleTime: 1*60*1000,
    }) }
