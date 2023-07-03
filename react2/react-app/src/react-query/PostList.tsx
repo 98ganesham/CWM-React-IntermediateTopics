@@ -4,11 +4,8 @@ import usePosts from './Hooks/usePost';
 import React, { useState } from 'react';
 
 const PostList = () => {
-    const pageSize =10;
-    
-   
- 
-  const { data, error, isLoading , fetchNextPage, isFetchingNextPage} = usePosts({  pageSize});
+    const pageSize =1;
+   const { data, error, isLoading , fetchNextPage, isFetchingNextPage} = usePosts({  pageSize});
   if(isLoading) return <p>Loading...</p>
 
   if (error) return <p>{error.message}</p>;
@@ -23,13 +20,8 @@ const PostList = () => {
                 {post.title}
                 </li>
         ))}
-            
         </React.Fragment>)}
-    
-
     </ul>
-
-    
     <button 
     className="btn btn-primary my-3 ms-1"
     disabled={isFetchingNextPage}
