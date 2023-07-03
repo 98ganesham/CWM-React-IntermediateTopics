@@ -1,15 +1,17 @@
 import './App.css'
-import PostList from './react-query/PostList'
-// import TodoList from "./react-query/TodoList"
+// import PostList from './react-query/PostList'
+import TodoList from './react-query/TodoList'
 
 
 function App() {
   
 
-  return <PostList />
-
-  
-  // <TodoList></TodoList>
+  return (<>
+  <div>
+    {/* <PostList /> */}
+    <TodoList></TodoList>
+  </div>
+  </>)
         
 }
 
