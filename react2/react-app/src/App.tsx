@@ -1,5 +1,5 @@
 import './App.css'
-// import PostList from './react-query/PostList'
+import PostList from './react-query/PostList'
 import TodoList from './react-query/TodoList'
 
 
