@@ -1,5 +1,5 @@
 import './App.css';
-import AuthProvider from './state-management/AuthProvider';
+import AuthProvider from './state-management/auth/AuthProvider';
 import HomePage from './state-management/HomePage';
 import NavBar from './state-management/NavBar';
 import { TaskProvider } from './state-management/tasks/index';
@@ -10,8 +10,7 @@ function App() {
    
   
   return (
-    
-      <AuthProvider>
+    <AuthProvider>
         <TaskProvider>
           <NavBar />
           <HomePage />
