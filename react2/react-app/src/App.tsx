@@ -1,22 +1,16 @@
-import Counter from './state-management/counter/Counter';
-import HomePage from './state-management/HomePage';
-import NavBar from './state-management/NavBar';
-import { TaskProvider } from './state-management/tasks/index';
-
+import HomePage from "./routing/HomePage";
+import NavBar from "./routing/NavBar";
 
 function App() {
-   return (
-    <TaskProvider>
-          <Counter />
-          <NavBar />
-          <HomePage />
-          </TaskProvider>
-        
-);
-
-  
-  
-        
+  return (
+    //     <TaskProvider>
+    <>
+      {/* <Counter /> */}
+      <NavBar />
+      <HomePage />
+    </>
+    // </TaskProvider>
+  );
 }
 
 export default App;

@@ -8,7 +8,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import { RouterProvider } from 'react-router-dom';
-import router from './routing/router';
+import router from './routing/routes';
 
 
 const queryClient = new QueryClient();
