@@ -1,13 +1,9 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { CACHE_KEY_TODOS } from "../constants";
 import todoService, { Todo } from "../services/todoService";
-
 interface AddTodoContext {
     previousTodos: Todo[]
 }
-
-
-
 const useAddTodo = (onAdd: () => void) => {
     const queryClinet = useQueryClient();
    return  useMutation<Todo, Error, Todo, AddTodoContext>({
@@ -32,7 +28,7 @@ const useAddTodo = (onAdd: () => void) => {
             
 
         },
-        onError: (error, newTodo, context ) =>{
+        onError: (error ,newTodo, context ) =>{
             if(!context) return ;
             queryClinet.setQueryData<Todo[]>(CACHE_KEY_TODOS, context.previousTodos);
         }

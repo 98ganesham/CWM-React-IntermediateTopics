@@ -1,10 +1,9 @@
 import { useInfiniteQuery} from "@tanstack/react-query";
 import axios from "axios";
-import APIClient from "../services/apiClient";
 import { CACHE_KEY_TODOS } from "../constants";
 
 
-const apiClient = new APIClient ('/posts')
+
 
 interface Post {
     id: number;
