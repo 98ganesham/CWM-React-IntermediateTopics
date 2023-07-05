@@ -1,10 +1,6 @@
-import { useContext, useReducer, useState } from "react";
-import authReducer from "./reducers/authReducer";
-import AuthContext from "./contexts/authContext";
-
 const LoginStatus = () => {
 
-   const {user, dispatch}=useContext(AuthContext);
+   const {user, dispatch}=useAuth();
   if (user)
     return (
       <>
@@ -26,3 +22,7 @@ const LoginStatus = () => {
 };
 
 export default LoginStatus;
+
+function useAuth(): { user: any; dispatch: any; } {
+  throw new Error("Function not implemented.");
+}
