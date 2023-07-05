@@ -1,5 +1,5 @@
 import { useReducer} from 'react';
-import counterReducer from './reduceers/counterReducer';
+import counterReducer from './reducers/counterReducer';
 
 const Counter = () => {
  const [value, dispatch]=useReducer(counterReducer, 0);
@@ -15,7 +15,8 @@ const Counter = () => {
       </button>
       <button
         onClick={() => dispatch({type: 'RESET'})}
-        className="btn btn-primary mx-1"
+        className="btn btn-primary
+         mx-1"
       >
         Reset
       </button>
