@@ -11,7 +11,7 @@ import TaskProvider from './state-management/TaskProvider';
 
 
 function App() {
-   const [tasks, tasksDispatch] = useReducer(tasksReducer, []);
+   
    
   
   return (
